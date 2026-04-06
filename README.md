@@ -33,7 +33,7 @@ npm install express mongoose express-session bcryptjs axios node-cron ejs
 ```
 
 3. **Setup database connection**
-Change MongoDB URI in `app.js`:
+Change MongoDB URI in `index.js`:
 ```javascript
 const MONGO_URI = "your_mongodb_connection_string";
 ```
