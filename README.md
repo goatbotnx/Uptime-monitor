@@ -1,6 +1,10 @@
 ```markdown
 # Server Monitor System
 
+
+# add your database in the index.js
+
+
 A complete web-based server monitoring system where you can monitor all your servers/websites via API.
 
 ## Features
