@@ -40,7 +40,7 @@ const MONGO_URI = "your_mongodb_connection_string";
 
 4. **Run application**
 ```bash
-node app.js
+node index.js
 ```
 
 5. **Open browser**
