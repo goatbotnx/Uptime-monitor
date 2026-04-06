@@ -29,7 +29,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // --- DATABASE CONFIG ---
-const MONGO_URI = "mongodb+srv://tbtnx210_db_user:xalmanx210@sexynx20.wwqenha.mongodb.net/?retryWrites=true&w=majority&appName=sexynx20";
+const MONGO_URI = "and your Mongoose database";
 
 mongoose.connect(MONGO_URI)
     .then(() => console.log("Database Connected Successfully"))
