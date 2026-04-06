@@ -1,0 +1,24 @@
+<body style="background:#080a0f; color:white; font-family:sans-serif; padding:20px;">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h1 style="color:#f1c40f;">👑 ADMIN PANEL</h1>
+        <a href="/dashboard" style="color:var(--neon); text-decoration:none;">← Back</a>
+    </div>
+    <table style="width:100%; border-collapse:collapse; margin-top:20px; background:#151921;">
+        <tr style="background:#f1c40f; color:black;">
+            <th style="padding:10px;">Key</th>
+            <th>Name</th>
+            <th>URL</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        <% allData.forEach(d => { %>
+            <tr style="border-bottom:1px solid #333; text-align:center;">
+                <td style="font-size:0.7rem; padding:10px; color:#888;"><%= d.ownerKey %></td>
+                <td><%= d.name %></td>
+                <td style="font-size:0.8rem;"><%= d.url %></td>
+                <td><%= d.status %></td>
+                <td><a href="/delete/<%= d._id %>" style="color:#ff4757; text-decoration:none;">Remove</a></td>
+            </tr>
+        <% }) %>
+    </table>
+</body>

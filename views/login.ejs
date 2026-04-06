@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Xalman Uptime</title>
+    <style>
+        :root { --neon: #00f2fe; --bg: #080a0f; }
+        body { background: var(--bg); color: white; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .auth-card { background: rgba(255,255,255,0.03); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px); width: 320px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        h2 { color: var(--neon); text-shadow: 0 0 10px var(--neon); margin-bottom: 25px; }
+        input { width: 100%; padding: 12px; margin: 10px 0; background: #151921; border: 1px solid #333; border-radius: 8px; color: white; box-sizing: border-box; outline: none; }
+        button { width: 100%; padding: 12px; background: var(--neon); border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 15px; }
+        a { color: var(--neon); text-decoration: none; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="auth-card">
+        <h2>LOGIN</h2>
+        <form action="/login" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">LOGIN NOW</button>
+        </form>
+        <p style="font-size: 0.8rem; color: #888; margin-top: 20px;">New user? <a href="/register">Register Here</a></p>
+    </div>
+</body>
+</html>
