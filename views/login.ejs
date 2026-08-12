@@ -6,17 +6,37 @@
     <title>Login | Xalman Uptime</title>
     <style>
         :root { --neon: #00f2fe; --bg: #080a0f; }
-        body { background: var(--bg); color: white; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .auth-card { background: rgba(255,255,255,0.03); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px); width: 320px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        h2 { color: var(--neon); text-shadow: 0 0 10px var(--neon); margin-bottom: 25px; }
+        body { background: var(--bg); color: white; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px 0; box-sizing: border-box; }
+        .auth-card { background: rgba(255,255,255,0.03); padding: 35px 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px); width: 340px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        h2 { color: var(--neon); text-shadow: 0 0 10px var(--neon); margin-bottom: 20px; }
         input { width: 100%; padding: 12px; margin: 10px 0; background: #151921; border: 1px solid #333; border-radius: 8px; color: white; box-sizing: border-box; outline: none; }
         button { width: 100%; padding: 12px; background: var(--neon); border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 15px; }
         a { color: var(--neon); text-decoration: none; font-size: 0.9rem; }
+        .stats-container { display: flex; gap: 8px; margin-bottom: 20px; }
+        .stat-box { flex: 1; background: rgba(255,255,255,0.05); padding: 10px 5px; border-radius: 10px; border: 1px solid #333; }
+        .stat-box h4 { margin: 0; font-size: 18px; }
+        .stat-box small { color: #aaa; font-size: 11px; }
     </style>
 </head>
 <body>
     <div class="auth-card">
         <h2>LOGIN</h2>
+
+        <div class="stats-container">
+            <div class="stat-box">
+                <h4 style="color: var(--neon);"><%= totalMonitors %></h4>
+                <small>Total Links</small>
+            </div>
+            <div class="stat-box">
+                <h4 style="color: #2ecc71;"><%= upCount %></h4>
+                <small>UP ✅</small>
+            </div>
+            <div class="stat-box">
+                <h4 style="color: #ff4757;"><%= downCount %></h4>
+                <small>DOWN ❌</small>
+            </div>
+        </div>
+
         <form action="/login" method="POST">
             <input type="email" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>
